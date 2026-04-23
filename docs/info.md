@@ -1,20 +1,42 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+This project implements a 1-bit half adder.
+
+A half adder adds two 1-bit binary inputs:
+- x
+- y
+
+It produces two outputs:
+- S = Sum
+- C = Carry
+
+The logic is:
+- S = x XOR y
+- C = x AND y
+
+This is a combinational circuit because the outputs depend only on the current input values.
 
 ## How to test
 
-Explain how to use your project
+Apply all 4 input combinations and verify the outputs:
+
+| x | y | S | C |
+|---|---|---|---|
+| 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+None
+
+## Pinout
+
+### Inputs
+- ui[0] = x
+- ui[1] = y
+
+### Outputs
+- uo[0] = S
+- uo[1] = C
